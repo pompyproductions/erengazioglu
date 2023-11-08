@@ -1,5 +1,16 @@
 @use "../globals" as *;
 
+header {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-auto-rows: 1fr;
+
+  @include break-at("small") {
+    grid-template-columns: min-content;
+    grid-template-rows: 1fr min-content;
+  }
+}
+
 header nav ul {
   display: flex;
   align-items: center;
@@ -8,6 +19,9 @@ header nav ul {
   li {
     font-size: 1rem;
     white-space: nowrap;
+    &:not(:first-of-type) {
+      display: none;
+    }
   }
   a {
     text-decoration: none;
@@ -16,8 +30,23 @@ header nav ul {
     }
   }
 
+  @include break-at("tablet") {
+    li:first-of-type {
+      display: none;
+    }
+    li:not(:first-of-type) {
+      display: block;
+    }
+  }
+
   @include break-at("small") {
     flex-direction: column;
     align-items: start;
+    gap: 1.2rem;
   }
+}
+
+.logo {
+  text-decoration: none;
+  // font-weight: 700;
 }
