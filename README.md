@@ -1,7 +1,3 @@
-# React Template for new projects
+# Personal Website
 
-Just clone this and npm install.
-
-## Stack
-
-Webpack, Gulp+Sass, React+Router.
+Readme TBD.
