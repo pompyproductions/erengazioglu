@@ -11,7 +11,6 @@ const App = () => {
     <React.StrictMode>
       <BrowserRouter>
         <Header />
-        <div className="vsep"></div>
         <Routes>
           <Route path="*" element={<Home />}/>
           <Route path="/page" element={<OtherPage />}/>

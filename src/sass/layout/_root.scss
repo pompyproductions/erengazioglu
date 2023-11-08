@@ -1,14 +1,33 @@
+@use "../globals" as *;
+
+:root {
+  background-color: var(--green);
+}
+
 #root {
   background-color: var(--green);
   color: var(--black);
   font-family: "Cousine", monospace;
   display: grid;
-  grid-template-rows: min-content 1px 1fr;
+  grid-template-rows: min-content 1fr;
   height: var(--doc-height);
-}
+  padding: var(--page-margin-y) var(--page-margin-x); 
+  row-gap: var(--page-margin-y);
+  column-gap: var(--page-margin-x);
 
-header, main {
-  padding: var(--page-margin-y) var(--page-margin-x);
+  @include break-at("small") {
+    grid-template-columns: 2fr 7fr;
+    grid-template-rows: 1fr;
+  }
+
+  @include break-at("medium") {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  @include break-at("huge") {
+    width: 1200px;
+  }
 }
 
 main {

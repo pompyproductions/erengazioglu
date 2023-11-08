@@ -1,5 +1,12 @@
+@use "../globals" as *;
+
 .vsep {
   background-color: currentColor;
   min-height: 1px;
+  min-width: 1px;
   margin: 0 var(--page-margin-x);
+
+  @include break-at("small") {
+    margin: 0;
+  }
 }
