@@ -5,26 +5,25 @@ header {
   grid-template-columns: 1fr min-content;
   grid-auto-rows: 1fr;
 
-  @include break-at("small") {
-    grid-template-columns: min-content;
-    grid-template-rows: 1fr min-content;
+  .logo {
+    justify-self: start;
+    align-self: start;
   }
-}
 
-header nav ul {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  
-  li {
-    font-size: 1rem;
-    white-space: nowrap;
-    &:not(:first-of-type) {
-      display: none;
-    }
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;  
   }
+
+  li:not(:first-of-type) {
+    display: none;
+  }
+
   a {
     text-decoration: none;
+    white-space: nowrap;
+    font-size: 1rem;
     &:hover {
       text-decoration: underline;
     }
@@ -40,13 +39,16 @@ header nav ul {
   }
 
   @include break-at("small") {
-    flex-direction: column;
-    align-items: start;
-    gap: 1.2rem;
+    grid-template-columns: min-content;
+    grid-template-rows: 1fr min-content;
+    nav ul {
+      flex-direction: column;
+      align-items: start;
+      gap: 1.2rem;
+    }
+    a {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
   }
-}
-
-.logo {
-  text-decoration: none;
-  // font-weight: 700;
 }
