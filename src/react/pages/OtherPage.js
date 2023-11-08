@@ -1,9 +1,10 @@
 import React from "react";
+import Card from "../components/Card";
 
 const OtherPage = () => {
   return (
     <main>
-      <h1>Other page!</h1>
+      <Card />
     </main>
   )
 }
