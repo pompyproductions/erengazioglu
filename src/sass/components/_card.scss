@@ -2,7 +2,7 @@
 
 .card {
   border-radius: var(--page-margin-x);
-  border: 1px solid var(--white);
+  border: 1px solid currentColor;
   padding: var(--page-margin-y) var(--page-margin-x);
   display: grid;
   grid-auto-rows: min-content;
