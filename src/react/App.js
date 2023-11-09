@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import OtherPage from "./pages/OtherPage";
+import OverlayMenu from "./components/OverlayMenu";
 
 const App = () => {
   return <>
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="*" element={<Home />}/>
           <Route path="/page" element={<OtherPage />}/>
         </Routes>
+        <OverlayMenu />
       </BrowserRouter>
     </React.StrictMode>
   </>

@@ -1,0 +1,11 @@
+dialog {
+  position: absolute;
+  width: 100%;
+  height: var(--doc-height);
+  display: grid;
+  place-items: center;
+  margin: 0;
+  inset: 0;
+
+  background-color: var(--green);
+}
