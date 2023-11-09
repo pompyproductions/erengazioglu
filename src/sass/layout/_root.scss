@@ -34,4 +34,9 @@ main {
   display: grid;
   grid-auto-rows: min-content;
   gap: var(--page-margin-y);
+  align-self: center;
+
+  @include break-at("small") {
+    align-self: stretch;
+  }
 }
