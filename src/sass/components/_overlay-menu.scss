@@ -1,11 +1,17 @@
-dialog {
+.overlay-menu {
   position: absolute;
-  width: 100%;
-  height: var(--doc-height);
+  inset: 0;
   display: grid;
   place-items: center;
-  margin: 0;
-  inset: 0;
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
 
   background-color: var(--green);
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    
+  }
 }
