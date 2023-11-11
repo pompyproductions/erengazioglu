@@ -18,7 +18,10 @@ const OverlayMenu = () => {
 
   return (
     <div className={`overlay-menu ${isActive ? "active" : ""}`}>
-      <Card />
+      <Card title="Website under construction.">
+      <p>Next scheduled update: 12 Nov. 2023</p>
+      <button onClick={() => window.location.href = "mailto:hello@erengazioglu.com"}>Send me an email</button>
+      </Card>
     </div>
   )
 }

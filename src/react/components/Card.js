@@ -1,13 +1,20 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <section className="card">
-      <h2>Website under construction.</h2>
-      <p>Next scheduled update: 12 Nov. 2023</p>
-      <button onClick={() => window.location.href='mailto:eren.g94@gmail.com'}>Send me an email</button>
+      <h2>{props.title}</h2>
+      {props.children}
     </section>
   )
+}
+
+Card.defaultProps = {
+  title: "No title",
+  children: <>
+    <p>Add content here</p>
+    <button onClick={() => alert("Button function.")}>Button example</button>
+  </>
 }
 
 export default Card;
