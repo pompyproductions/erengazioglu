@@ -7,7 +7,8 @@ const Header = (props) => {
     <header>
       <Link to="/" className="logo">Eren Gazioglu</Link>
       <Card title="Website under construction.">
-        <p>Next scheduled update: 12 Nov. 2023</p>
+        <p>Last update: 12 Nov. 2023</p>
+        <p>Next scheduled update: 17 Nov. 2023</p>
       </Card>
       <nav>
         <ul>

@@ -29,11 +29,11 @@ const App = () => {
           <Route path="/projects" element={<ProjectsPage />}/>
           <Route path="/contact" element={<ContactPage />}/>
         </Routes>
-        {/* <OverlayMenu title="Website under construction." isActive>
+        <OverlayMenu title="Website under construction." isActive>
           <p>Last update: 12 Nov. 2023</p>
           <p>Next scheduled update: 17 Nov. 2023</p>
           <button onClick={() => window.location.href = "mailto:hello@erengazioglu.com"}>Send me an email</button>
-        </OverlayMenu> */}
+        </OverlayMenu>
         <OverlayMenu title="Menu" isActive={isNavMenuOpen} stateReport={navMenuStateReport}>
           <Link to="contact">Projects</Link>
           <Link to="contact">About</Link>
