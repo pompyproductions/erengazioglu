@@ -10,8 +10,8 @@
   --blue: #2741CB;
   --green: #12FF63;
 
-  --page-margin-x: 1.2rem;
-  --page-margin-y: 1rem;
+  --page-margin-x: 1.5rem;
+  --page-margin-y: 1.2rem;
 
   @include break-at("small") {
     --page-margin-x: 3.2rem;
@@ -19,7 +19,7 @@
   }
 }
 
-p {
+p, li {
   line-height: 1.4;
 }
 
