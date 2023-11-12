@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../components/Card";
 
-const OtherPage = () => {
+const Contact = () => {
   return (
     <main>
       <Card />
@@ -9,4 +9,4 @@ const OtherPage = () => {
   )
 }
 
-export default OtherPage;
+export default Contact;

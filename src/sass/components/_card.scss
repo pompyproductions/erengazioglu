@@ -29,6 +29,12 @@
         background: unset;
       }
     }
+    a {
+      align-self: stretch;
+      text-align: center;
+      margin: 1.2em 0em 0.8em 0em;
+      grid-column: span 2;
+    }
   }
   @include break-at("small") {
     font-size: 1em;

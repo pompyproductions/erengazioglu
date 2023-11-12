@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "./Card";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
       <Link to="/" className="logo">Eren Gazioglu</Link>
@@ -11,10 +11,9 @@ const Header = () => {
       </Card>
       <nav>
         <ul>
-          <li><Link>Menu</Link></li>
-          <li><Link to="/page">Projects</Link></li>
-          <li><Link to="/page">About</Link></li>
-          <li><Link to="/page">Contact</Link></li>
+          <li><Link onClick={props.callback}>Menu</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
       
