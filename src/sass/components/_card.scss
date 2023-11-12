@@ -10,6 +10,9 @@
   h2 {
     font-size: 1.5em;
   }
+  p {
+    font-size: 1.2em;
+  }
   &.double {
     grid-template-columns: 1fr min-content;
     & > * {
@@ -38,6 +41,9 @@
   }
   @include break-at("small") {
     font-size: 1em;
+    p {
+      font-size: 1em;
+    }
   }
 }
 
