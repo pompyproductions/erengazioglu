@@ -16,6 +16,9 @@ const App = () => {
     toggleNavMenu((state) => !state);
     console.log("click!");
   }
+  function navMenuStateReport(s) {
+    toggleNavMenu(s);
+  }
 
   return <>
     {/* <React.StrictMode> */}
@@ -30,7 +33,7 @@ const App = () => {
           <p>Next scheduled update: 12 Nov. 2023</p>
           <button onClick={() => window.location.href = "mailto:hello@erengazioglu.com"}>Send me an email</button>
         </OverlayMenu>
-        <OverlayMenu title="Menu" isActive={isNavMenuOpen}>
+        <OverlayMenu title="Menu" isActive={isNavMenuOpen} stateReport={navMenuStateReport}>
           <Link to="contact">Projects</Link>
           <Link to="contact">About</Link>
           <Link to="contact">Contact</Link>

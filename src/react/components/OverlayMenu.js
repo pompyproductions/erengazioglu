@@ -10,8 +10,14 @@ const OverlayMenu = (props) => {
 
   // very fragile code, two separate isActive values, optimize this?
   useEffect(() => {
-    toggle(isActive => !isActive);
+    toggle(props.isActive);
   }, [props.isActive])
+  useEffect(() => {
+    if (props.stateReport) {
+      props.stateReport(isActive);
+    }
+  }, [isActive]);
+  
 
   return (
     <div className={`overlay-menu ${isActive ? "active" : ""}`}>
