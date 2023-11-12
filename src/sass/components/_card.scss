@@ -1,11 +1,15 @@
 @use "../globals/breakpoints" as *;
 
 .card {
+  font-size: 0.8em;
   display: grid;
-  gap: 1.1rem 2rem;
+  gap: 1.2em 2em;
   border: 1px solid var(--black);
   background-color: var(--green);
   padding: var(--page-margin-y) var(--page-margin-x);
+  h2 {
+    font-size: 1.5em;
+  }
   &.double {
     grid-template-columns: 1fr min-content;
     & > * {
@@ -15,7 +19,7 @@
       padding: 0 0.4em;
       grid-area: 1 / 2;
       border: none;
-      font-size: 1.5rem;
+      font-size: 1.5em;
       font-weight: 700;
       transform: translateX(0.4em); // unsets the padding while keeping the clickable area
       transition: transform 0.2s;
@@ -25,5 +29,17 @@
         background: unset;
       }
     }
+  }
+  @include break-at("small") {
+    font-size: 1em;
+  }
+}
+
+header .card {
+  display: none;
+  @include break-at("small") {
+    display: grid;
+    font-size: 0.8em;
+    padding: 2em;
   }
 }

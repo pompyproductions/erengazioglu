@@ -12,7 +12,7 @@ const Card = (props) => {
 Card.defaultProps = {
   title: "No title",
   children: <>
-    <p>Add content here</p>
+    <p>Add content here.</p>
     <button onClick={() => alert("Button function.")}>Button example</button>
   </>
 }

@@ -3,7 +3,6 @@
 header {
   display: grid;
   grid-template-columns: 1fr min-content;
-  grid-auto-rows: 1fr;
 
   .logo {
     justify-self: start;
@@ -40,7 +39,9 @@ header {
 
   @include break-at("small") {
     grid-template-columns: min-content;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: 1fr;
+    grid-auto-rows: min-content;
+    gap: 2rem;
     nav ul {
       flex-direction: column;
       align-items: start;
