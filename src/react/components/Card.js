@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <section className="card">
+    <section className={`card ${props.className}`}>
       <h2>{props.title}</h2>
       {props.children}
     </section>
