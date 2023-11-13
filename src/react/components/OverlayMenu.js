@@ -5,7 +5,13 @@ const OverlayMenu = (props) => {
   const [isActive, toggle] = useState(props.isActive);
 
   function handleCloseButton() {
-    toggle((state) => !state);
+    toggle(false);
+  }
+
+  function handleEscPressed(e) {
+    if (e.key === "Escape") {
+      handleCloseButton();
+    }
   }
 
   // very fragile code, two separate isActive values, optimize this?
@@ -17,6 +23,13 @@ const OverlayMenu = (props) => {
       props.stateReport(isActive);
     }
   }, [isActive]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleEscPressed);
+    return () => {
+      window.removeEventListener("keydown", handleEscPressed)
+    }
+  }, []);
   
 
   return (
