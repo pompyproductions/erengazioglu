@@ -1,5 +1,6 @@
 import React from "react";
-import Card from "../components/Card"
+import Card from "../components/Card";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -12,9 +13,9 @@ const Home = () => {
         <p>If you don't want to wait until the next update to see more, you can:</p>
         <nav>
           <ul>
-            <li><a href="https://github.com/pompyproductions">find my projects in my GitHub profile,</a></li>
-            <li>check out my <a href="https://codepen.io/pompyproductions" target="_blank">CodePen,</a></li>
-            <li><a href="mailto:hello@erengazioglu.com?subject=Let\'s get in touch">reach out</a> with an email</li>
+            <li>find my projects in <a href="https://github.com/pompyproductions">my GitHub profile,</a></li>
+            <li>check out <a href="https://codepen.io/pompyproductions" target="_blank">my CodePen</a>,</li>
+            <li>or <Link to="/contact">get in touch with me</Link> directly!</li>
           </ul>
         </nav>
       </div>
