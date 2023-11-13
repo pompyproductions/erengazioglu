@@ -5,10 +5,11 @@ import { Link } from "react-router-dom"
 const Contact = () => {
   return (
     <main>
-      <Card title="This page is under development.">
-        <p>Sorry for the inconvenience, check back soon!</p>
-        <Link to="/"><button>&lt; Go back to the homepage</button></Link>
+      <Card title="Contact form under development.">
+        <p>Instead of waiting, you can send me an email by clicking the button below.</p>
+        <a href="mailto:hello@erengazioglu.com?subject=Let\'s get in touch" target="_blank"><button>Send me an email</button></a>
       </Card>
+      <Link to="/"><button>&lt; Go back to the homepage</button></Link>
     </main>
   )
 }

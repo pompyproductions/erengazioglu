@@ -7,8 +7,8 @@ const Projects = () => {
     <main>
       <Card title="This page is under development.">
         <p>Sorry for the inconvenience, check back soon!</p>
-        <Link to="/"><button>&lt; Go back to the homepage</button></Link>
       </Card>
+      <Link to="/"><button>&lt; Go back to the homepage</button></Link>
     </main>
   )
 }
