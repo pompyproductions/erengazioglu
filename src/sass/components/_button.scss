@@ -7,7 +7,7 @@ button {
   align-self: start;
   justify-self: start;
   padding: .4em 1.2em;
-  font-size: .8em;
+  font-size: .8rem;
   transition: background-color 0.15s, border 0.15s;
   &:hover {
     background-color: var(--black);
@@ -16,6 +16,6 @@ button {
     cursor: pointer;
   }
   @include break-at("huge") {
-    font-size: .85em
+    font-size: .85rem
   }
 }
