@@ -10,11 +10,19 @@
   --blue: #2741CB;
   --green: #12FF63;
 
-  --page-margin-x: 1.4rem;
-  --page-margin-y: 1rem;
+  --page-margin-x: 1.5rem;
+  --page-margin-y: 1.2rem;
 
   @include break-at("small") {
     --page-margin-x: 3.2rem;
     --page-margin-y: 2.4rem;
   }
+}
+
+p, li {
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 1.5em;
 }

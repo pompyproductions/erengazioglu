@@ -3,7 +3,6 @@
 header {
   display: grid;
   grid-template-columns: 1fr min-content;
-  grid-auto-rows: 1fr;
 
   .logo {
     justify-self: start;
@@ -13,7 +12,7 @@ header {
   nav ul {
     display: flex;
     align-items: center;
-    gap: 2rem;  
+    gap: 2em;  
   }
 
   li:not(:first-of-type) {
@@ -23,7 +22,7 @@ header {
   a {
     text-decoration: none;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 1em;
     &:hover {
       text-decoration: underline;
     }
@@ -40,15 +39,17 @@ header {
 
   @include break-at("small") {
     grid-template-columns: min-content;
-    grid-template-rows: 1fr min-content;
+    grid-template-rows: 1fr;
+    grid-auto-rows: min-content;
+    gap: 2em;
     nav ul {
       flex-direction: column;
       align-items: start;
-      gap: 1.2rem;
+      gap: 1.2em;
     }
     a {
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.1em;
     }
   }
 }
