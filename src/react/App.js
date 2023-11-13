@@ -14,10 +14,12 @@ const App = () => {
 
   function onMenuButtonPressed() {
     toggleNavMenu((state) => !state);
-    console.log("click!");
   }
   function navMenuStateReport(s) {
     toggleNavMenu(s);
+  }
+  function closeNavMenu() {
+    toggleNavMenu(false);
   }
 
   return <>
@@ -35,9 +37,9 @@ const App = () => {
           <button onClick={() => window.location.href = "mailto:hello@erengazioglu.com"}>Send me an email</button>
         </OverlayMenu>
         <OverlayMenu title="Menu" isActive={isNavMenuOpen} stateReport={navMenuStateReport}>
-          <Link to="contact">Projects</Link>
-          <Link to="contact">About</Link>
-          <Link to="contact">Contact</Link>
+          <Link to="home" onClick={closeNavMenu}>Home</Link>
+          <Link to="projects" onClick={closeNavMenu}>Projects</Link>
+          <Link to="contact" onClick={closeNavMenu}>Contact</Link>
         </OverlayMenu>
       </BrowserRouter>
     {/* </React.StrictMode> */}
