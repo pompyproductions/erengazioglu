@@ -1,8 +1,10 @@
 .img-container {
   overflow: hidden;
-  width: 400px;
-  height: 400px;
+  width: 440px;
+  height: 440px;
   cursor: pointer;
+  border: 1px solid var(--black);
+  padding: 20px;
 
   img {
     transition: transform .2s;
