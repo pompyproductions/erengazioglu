@@ -34,15 +34,29 @@
     width: 1200px;
     font-size: 1.1em;
   }
+
+  overflow: hidden;
 }
 
 main {
   display: grid;
   grid-auto-rows: min-content;
   gap: var(--page-margin-y);
-  align-self: center;
+  overflow: auto;
 
   @include break-at("small") {
     align-self: stretch;
+  }
+
+  // scrollbar-color: var(--black);
+  // scrollbar-width: 8px;
+}
+
+::-webkit-scrollbar {
+  margin: 1rem;
+  width: 4px;
+  border: 1px solid black;
+  &-thumb {
+      background-color: var(--black);
   }
 }

@@ -1,17 +1,18 @@
 .img-container {
   overflow: hidden;
-  width: 440px;
-  height: 440px;
   cursor: pointer;
   border: 1px solid var(--black);
   padding: 20px;
+  transition: padding .2s;
 
-  img {
-    transition: transform .2s;
+  &:hover {
+    padding: 0;
   }
-
-  img:hover {
-    transform: scale(1.2);
-  }
-
 }
+
+.thumbnail-grid {
+  display: grid;
+  gap: var(--page-margin-y);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
