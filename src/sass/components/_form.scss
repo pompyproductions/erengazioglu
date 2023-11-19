@@ -1,0 +1,91 @@
+@use "../globals/breakpoints" as *;
+
+form {
+
+  legend {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  ul {
+    display: grid;
+    gap: 1em;
+  }
+
+  li {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    &.col {
+      flex-direction: column;
+    }
+    @include break-at("tablet") {
+      flex-direction: row;
+    }
+  }
+
+
+}
+
+form label {
+  font-size: .9rem;
+}
+
+form input {
+  flex: 1 0 auto;
+  background: none;
+  border: 1px solid transparent;
+  border-bottom-color: var(--black);
+  padding: 0 1rem;
+  font-size: .9rem;
+
+  &:focus {
+    border: 1px solid var(--black);
+    outline: 1px solid var(--black);
+    outline-offset: 1px;
+  }
+}
+
+.textarea-container {
+  --line-thickness: 1px;
+  --line-height: 1.6rem;
+  position: relative;
+  height: 20rem;
+  resize: vertical;
+  overflow: hidden;
+  border: 1px solid transparent;
+
+  &:focus-within {
+    border: 1px solid var(--black);
+    outline: 1px solid var(--black);
+    outline-offset: 1px;
+  }
+
+  textarea, div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+  }
+  textarea {
+    resize: none;
+    background: none;
+    border: none;
+    line-height: var(--line-height);
+    font-size: .9rem;
+  }
+  div {
+    background-image: repeating-linear-gradient(
+      var(--green) 0px, 
+      var(--green) calc(var(--line-height) - var(--line-thickness)), 
+      var(--black) calc(var(--line-height) - var(--line-thickness)),
+      var(--black) calc(var(--line-height))
+      );
+  }
+}
+
+.form-note {
+  font-size: .8rem !important;
+  align-self: end;
+}
