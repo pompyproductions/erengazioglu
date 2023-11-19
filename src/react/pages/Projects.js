@@ -11,13 +11,13 @@ const Projects = () => {
         <p>Sorry for the inconvenience, check back soon!</p>
       </Card>
       <Link to="/"><button>&lt; Go back to the homepage</button></Link>
-      <div className="thumbnail-grid">
+      {/* <div className="thumbnail-grid">
         <Image imgurl={livranoSite}/>
         <Image imgurl={livranoSite}/>
         <Image imgurl={livranoSite}/>
         <Image imgurl={livranoSite}/>
         <Image imgurl={livranoSite}/>
-      </div>
+      </div> */}
     </main>
   )
 }
