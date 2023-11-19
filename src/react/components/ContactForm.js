@@ -2,8 +2,8 @@ import React from "react";
 
 const ContactForm = (props) => {
   return <>
-    <form name="contact" id="contact" method="post" className="card" data-netlify="true">
-      {/* <input type="hidden" name="form-name" value="contact" /> */}
+    <form name="contact" id="contact" method="post" className="card" netlify netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
       
       <legend>Contact form</legend>
       <ul>
