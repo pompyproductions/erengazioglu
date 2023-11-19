@@ -13,7 +13,7 @@ const ContactForm = (props) => {
         </li>
         <li>
           <label htmlFor="address" >E-mail:</label>
-          <input required type="email" id="address" name="address" placeholder=""/>
+          <input required type="email" id="email" name="email" placeholder=""/>
         </li>
         <li className="col">
           <label htmlFor="message" >Your message:</label>
