@@ -25,4 +25,8 @@ button {
 a {
   align-self: start;
   justify-self: start;
+  &:hover {
+    color: var(--blue);
+    transition: color 0.12s;
+  }
 }
