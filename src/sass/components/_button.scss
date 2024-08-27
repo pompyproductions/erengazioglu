@@ -1,8 +1,9 @@
 @use "../globals/breakpoints" as *;
+@use "../globals/mixins" as *;
 
 button {
-  background-color: var(--white-bg);
   color: var(--black);
+  @include bg-frost;
   border: 1px solid currentColor;
   box-shadow: 0 0 0 0 var(--black);
   align-self: start;
@@ -11,7 +12,7 @@ button {
   font-size: .8rem;
   transition: background-color 0.15s, border 0.15s;
   &:hover {
-    background-color: var(--white);
+    background-color: white;
     cursor: pointer;
     box-shadow: 0 1px var(--black);
     transform: translateY(-1px);
@@ -26,7 +27,7 @@ a {
   align-self: start;
   justify-self: start;
   &:hover {
-    color: var(--blue);
+    color: var(--red);
     transition: color 0.12s;
   }
 }

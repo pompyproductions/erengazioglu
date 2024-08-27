@@ -1,7 +1,7 @@
 @use "../globals" as *;
 
 :root {
-  background: url("~/src/assets/bg/CARPET-01.jpg");
+  background: var(--main-bg);
 }
 
 #root {

@@ -4,3 +4,14 @@
     -moz-user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
+
+@mixin bg-frost {
+    // FROSTED GLASS EFFECT WITH FALLBACK
+    background-color: #FFF9;
+    box-shadow: 0 2px 12px rgba(130, 255, 243, 0.44);
+  
+    @supports (backdrop-filter: blur()) {
+        background-color: #FFFFFF60;
+        backdrop-filter: blur(3px);
+    }
+}
