@@ -9,7 +9,7 @@
   pointer-events: none;
   transition: opacity 0.2s;
 
-  background-color: var(--green);
+  background: url("~/src/assets/bg/CARPET-01.jpg");
   &.active {
     opacity: 1;
     pointer-events: all;

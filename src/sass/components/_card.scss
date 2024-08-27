@@ -40,6 +40,11 @@
       font-size: .9rem;
     }
   }
+  button.close,
+  button.close:hover {
+    box-shadow: none;
+    background: none;
+  }
   @include break-at("small") {
     font-size: 1em;
     p {
