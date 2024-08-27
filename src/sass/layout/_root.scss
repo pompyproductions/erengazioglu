@@ -1,11 +1,10 @@
 @use "../globals" as *;
 
 :root {
-  background-color: var(--green);
+  background: url("~/src/assets/bg/CARPET-01.jpg");
 }
 
 #root {
-  background-color: var(--green);
   color: var(--black);
   font-family: "Cousine", monospace;
   display: grid;
@@ -42,7 +41,7 @@ main {
   display: grid;
   grid-auto-rows: min-content;
   gap: var(--page-margin-y);
-  overflow: auto;
+  // overflow: auto;
 
   @include break-at("small") {
     align-self: stretch;

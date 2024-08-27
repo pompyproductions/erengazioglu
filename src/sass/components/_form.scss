@@ -77,8 +77,8 @@ form input {
   }
   div {
     background-image: repeating-linear-gradient(
-      var(--green) 0px, 
-      var(--green) calc(var(--line-height) - var(--line-thickness)), 
+      transparent 0px, 
+      transparent calc(var(--line-height) - var(--line-thickness)), 
       var(--black) calc(var(--line-height) - var(--line-thickness)),
       var(--black) calc(var(--line-height))
       );

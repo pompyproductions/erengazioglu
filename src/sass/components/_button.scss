@@ -1,19 +1,21 @@
 @use "../globals/breakpoints" as *;
 
 button {
-  background-color: var(--green);
+  background-color: var(--white-bg);
   color: var(--black);
   border: 1px solid currentColor;
+  box-shadow: 0 0 0 0 var(--black);
   align-self: start;
   justify-self: start;
   padding: .4em 1.2em;
   font-size: .8rem;
   transition: background-color 0.15s, border 0.15s;
   &:hover {
-    background-color: var(--black);
-    color: var(--green);
-    border: 1px solid black;
+    background-color: var(--white);
     cursor: pointer;
+    box-shadow: 0 1px var(--black);
+    transform: translateY(-1px);
+    transition: box-shadow 0.2s, transform 0.2s;
   }
   @include break-at("huge") {
     font-size: .85rem
