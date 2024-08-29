@@ -6,6 +6,8 @@
 
 #root {
   color: var(--black);
+  background-color: #FFFFFF64;
+  box-shadow: 0 0 8px #FFFFFF;
   font-family: "Cousine", monospace;
   display: grid;
   grid-template-rows: min-content 1fr;
