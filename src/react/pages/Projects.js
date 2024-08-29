@@ -3,38 +3,50 @@ import Card from "../components/Card";
 import { Link } from "react-router-dom"
 import Image from "../components/Image";
 import livranoSite from "../../assets/thumbnails/livrano-600.png";
+import ProjectContent from "../components/ProjectContent";
 
 const Projects = () => {
   return (
     <main>
       <h2>Projects</h2>
       <p>
-        Below, you can find some of the personal projects that I've been working on.<br/><br/>
+        Below, you can find some of my personal projects.<br/><br/>
         Please note that <em>this page is still under development,</em> and that it's not an exhaustive list of my work.
       </p>
       <Card title="Livrano.com">
-        <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/>
+        <ProjectContent>
+          {/* <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/> */}
+          <p>
+            A portfolio website for Livrano, a creative studio that specializes in graphic and editorial design.<br/><br/>
+            Solo project consisting of: Design of the website, front-end code (written from scratch using React and Sass),
+            domain and hosting setup (through Netlify).
+          </p>
+          <p>Date: 2022</p>
+          <a href="https://livrano.com">Visit livrano.com</a>
+        </ProjectContent>
+      </Card>
+      <Card title="AutoCAD Manual of Style">
+        <ProjectContent>
+          {/* <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/> */}
+          <p>
+            A Manual of Style for AutoCAD, written and developed by me as a reference guide. 
+          </p>
+          <p>Date: 2024 – Present</p>
+          <a href="https://pompyproductions.github.io/autocad-reference/">Visit ACADMOS</a>
+        </ProjectContent>
+      </Card>
+
+
+      <Card title="Studio Cutelo website">
         <p>
-          A portfolio website for Livrano, a creative studio that specializes in graphic and editorial design.<br/><br/>
-          Solo project consisting of: Design of the website, Front-end code (written from scratch using React and Sass),
-          Setting up the domain and hosting (through Netlify).
+          A website for Studio Cutelo, an architecture studio based in Lisbon, Portugal.<br/><br/>
+          Solo project consisting of: Design of the website, front-end code (written from scratch using React and Sass),
+          domain and hosting setup (through Netlify).
         </p>
-        <p>Date: 2022</p>
-        <a href="https://livrano.com">Visit livrano.com</a>
+        <p>Date: 2023 – Present</p>
+        <p>Status: Under development</p>
+        <a href="https://studiocutelo.com">Visit studiocutelo.com</a>
       </Card>
-
-
-      <Card title="This page is under development.">
-        <p>Sorry for the inconvenience, check back soon!</p>
-      </Card>
-      <Link to="/"><button>&lt; Go back to the homepage</button></Link>
-      {/* <div className="thumbnail-grid">
-        <Image imgurl={livranoSite}/>
-        <Image imgurl={livranoSite}/>
-        <Image imgurl={livranoSite}/>
-        <Image imgurl={livranoSite}/>
-        <Image imgurl={livranoSite}/>
-      </div> */}
     </main>
   )
 }
