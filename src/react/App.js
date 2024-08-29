@@ -31,7 +31,7 @@ const App = () => {
           <Route path="/projects" element={<ProjectsPage />}/>
           <Route path="/contact" element={<ContactPage />}/>
         </Routes>
-        <OverlayMenu title="Website under construction." isActive>
+        <OverlayMenu title="Website under construction." isActive={false}>
           <p>Last update: 28 Oct. 2024</p>
           <p>Next scheduled update: 02 Sep. 2024</p>
           <button onClick={() => window.location.href = "mailto:hello@erengazioglu.com"}>Send me an email</button>

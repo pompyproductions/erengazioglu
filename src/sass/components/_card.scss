@@ -6,6 +6,11 @@
   display: grid;
   gap: 1.2em 2em;
   border: 1px solid #420b0b;
+
+  img.thumb {
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
   
   @include bg-frost;
 
