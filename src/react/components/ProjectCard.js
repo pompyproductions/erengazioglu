@@ -1,7 +1,14 @@
 import React from "react";
 import Card from "./Card";
+import { useState } from "react";
 
 const ProjectCard = (props) => {
+
+  const { isCollapsed, setCollapsed } = useState(false);
+
+  const handleCollapse = () => {
+    setCollapsed(state => !state)
+  }
 
   return (
     <Card
@@ -9,13 +16,9 @@ const ProjectCard = (props) => {
       title={props.title}
       
     >
+      <button className="close">{isCollapsed ? "+" : "—"}</button>
       <div className="content">
-        <div className="left">
-          {props.children}
-        </div>
-        <div className="right">
-          
-        </div>
+        {props.children}
       </div>
     </Card>
   )

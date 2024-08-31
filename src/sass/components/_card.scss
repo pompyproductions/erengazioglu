@@ -35,20 +35,6 @@
     & > * {
       grid-column: 1;
     }
-    & > button.close {
-      padding: 0 0.4em;
-      grid-area: 1 / 2;
-      border: none;
-      font-size: 1.5em;
-      font-weight: 700;
-      transform: translateX(0.4em); // unsets the padding while keeping the clickable area
-      transition: transform 0.2s;
-      &:hover {
-        transform: translateX(0.4em) scale(1.25);
-        color: currentColor;
-        background: unset;
-      }
-    }
     a {
       align-self: stretch;
       text-align: center;
@@ -57,11 +43,23 @@
       font-size: .9rem;
     }
   }
-  button.close,
-  button.close:hover {
+  button.close {
     box-shadow: none;
     background: none;
+    color: currentColor;
+    background: unset;
+    padding: 0 0.4em;
+    grid-area: 1 / 2;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    transform: translateX(0.4em); // unsets the padding while keeping the clickable area
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateX(0.4em) scale(1.25);
+    }
   }
+
   @include break-at("small") {
     font-size: 1em;
     p {
@@ -76,5 +74,9 @@ header .card {
     display: grid;
     font-size: 0.8em;
     padding: 2em;
+  }
+
+  &.project {
+
   }
 }
