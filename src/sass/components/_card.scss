@@ -104,9 +104,15 @@
 
 header .card {
   display: none;
+
+  .title-bar {
+    display: none;
+  }
+
   @include break-at("small") {
     display: grid;
     font-size: 0.8em;
     padding: 2em;
+    width: 100%;
   }
 }
