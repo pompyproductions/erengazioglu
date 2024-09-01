@@ -34,7 +34,8 @@ const Projects = () => {
           Solo project consisting of: Design of the website, front-end code (written from scratch using React and Sass),
           domain and hosting setup (through Netlify).
         </p> */}
-        <p>Date: 2022</p>
+        {/* <p>Date: 2022</p> */}
+        <p>Status: Online</p>
         <div className="card-buttons">
           <button href="https://livrano.com" onClick={handleLink}>Visit livrano.com</button>
         </div>
@@ -51,7 +52,8 @@ const Projects = () => {
         {/* <p>
           In form of a static website written, developed, and maintained by me (using Material for MKDocs).
         </p> */}
-        <p>Date: 2024 – Present</p>
+        {/* <p>Date: 2024 – Present</p> */}
+        <p>Status: Online (continuous development)</p>
         <div className="card-buttons">
           <button href="https://oncadevelopment.com" onClick={handleLink}>Visit ONCA</button>
         </div>
