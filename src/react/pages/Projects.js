@@ -1,52 +1,104 @@
 import React from "react";
 import Card from "../components/Card";
 import { Link } from "react-router-dom"
-import Image from "../components/Image";
-import livranoSite from "../../assets/thumbnails/livrano-600.png";
-import ProjectContent from "../components/ProjectContent";
+import ProjectCard from "../components/ProjectCard";
+
+// image imports
+import livranoSite from "../../assets/thumbnails/LIVRANO-L.jpg";
+import oncaSite from "../../assets/thumbnails/ONCA-L.jpg";
+import acadmos from "../../assets/thumbnails/ACADMOS-L.jpg";
+import cuteloSite from "../../assets/thumbnails/CUTELO-L.jpg";
 
 const Projects = () => {
+
+  const handleLink = (e) => {
+    window.open(e.target.getAttribute("href"), "_blank")
+  }
+
   return (
     <main>
       <h2>Projects</h2>
       <p>
-        Below, you can find some of my personal projects.<br/><br/>
-        Please note that <em>this page is still under development,</em> and that it's not an exhaustive list of my work.
+        Below, you can find some of my personal projects.
+        Please note that that it's not an exhaustive list of my work.<br/><br/> 
+        To find out more about what I do,
+        or to commission me for your own projects,
+        feel free to <Link to="/contact">reach out!</Link> 
       </p>
-      <Card title="Livrano.com">
-        <ProjectContent>
-          {/* <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/> */}
-          <p>
-            A portfolio website for Livrano, a creative studio that specializes in graphic and editorial design.<br/><br/>
-            Solo project consisting of: Design of the website, front-end code (written from scratch using React and Sass),
-            domain and hosting setup (through Netlify).
-          </p>
-          <p>Date: 2022</p>
-          <a href="https://livrano.com">Visit livrano.com</a>
-        </ProjectContent>
-      </Card>
-      <Card title="AutoCAD Manual of Style">
-        <ProjectContent>
-          {/* <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/> */}
-          <p>
-            A Manual of Style for AutoCAD, written and developed by me as a reference guide. 
-          </p>
-          <p>Date: 2024 – Present</p>
-          <a href="https://pompyproductions.github.io/autocad-reference/">Visit ACADMOS</a>
-        </ProjectContent>
-      </Card>
-
-
-      <Card title="Studio Cutelo website">
+      <ProjectCard 
+        title="Livrano.com" 
+        image={livranoSite}
+        imageAlt="Livrano website on smartphone and laptop displays."
+      >
         <p>
-          A website for Studio Cutelo, an architecture studio based in Lisbon, Portugal.<br/><br/>
+          A portfolio website for Livrano, a creative studio that specializes in graphic and editorial design.
+        </p>
+        {/* <p>
           Solo project consisting of: Design of the website, front-end code (written from scratch using React and Sass),
           domain and hosting setup (through Netlify).
+        </p> */}
+        {/* <p>Date: 2022</p> */}
+        <p>Status: Online</p>
+        <div className="card-buttons">
+          <button href="https://livrano.com" onClick={handleLink}>Visit livrano.com</button>
+        </div>
+      </ProjectCard>
+      <ProjectCard 
+        title="ONCA Development website"
+        image={oncaSite}
+        imageAlt="ONCA Development website on a laptop display."
+      >
+        {/* <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/> */}
+        <p>
+          An online style guide and reference document for AutoCAD.
         </p>
-        <p>Date: 2023 – Present</p>
-        <p>Status: Under development</p>
-        <a href="https://studiocutelo.com">Visit studiocutelo.com</a>
-      </Card>
+        {/* <p>
+          In form of a static website written, developed, and maintained by me (using Material for MKDocs).
+        </p> */}
+        {/* <p>Date: 2024 – Present</p> */}
+        <p>Status: Online (continuous development)</p>
+        <div className="card-buttons">
+          <button href="https://oncadevelopment.com" onClick={handleLink}>Visit ONCA</button>
+        </div>
+      </ProjectCard>
+      <ProjectCard 
+        title="AutoCAD Manual of Style"
+        image={acadmos}
+        imageAlt="ACADMOS displayed on stacked laptops."
+      >
+        {/* <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/> */}
+        <p>
+          An online style guide and reference document for AutoCAD.
+        </p>
+        {/* <p>
+          In form of a static website written, developed, and maintained by me (using Material for MKDocs).
+        </p> */}
+        {/* <p>Date: 2024 – Present</p> */}
+        <p>Status: Online (continuous development)</p>
+        <div className="card-buttons">
+          <button href="https://pompyproductions.github.io/autocad-reference/" onClick={handleLink}>Visit ACADMOS</button>
+        </div>
+      </ProjectCard>
+
+
+      <ProjectCard 
+        title="Studio Cutelo website"
+        image={cuteloSite}
+        imageAlt="Livrano website on smartphone and laptop displays."
+      >
+        <p>
+          A website for Studio Cutelo, an architecture studio based in Lisbon, Portugal.
+        </p>
+        {/* <p>
+          Solo project consisting of: Design of the website, front-end code (written from scratch using React and Sass),
+          domain and hosting setup (through Netlify).
+        </p> */}
+        {/* <p>Date: 2023 – Present</p> */}
+        <p>Status: Online (under construction)</p>
+        <div className="card-buttons">
+          <button href="https://studiocutelo.com" onClick={handleLink}>Visit studiocutelo.com</button>
+        </div>
+      </ProjectCard>
     </main>
   )
 }

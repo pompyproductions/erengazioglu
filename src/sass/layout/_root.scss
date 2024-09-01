@@ -43,21 +43,12 @@ main {
   display: grid;
   grid-auto-rows: min-content;
   gap: var(--page-margin-y);
-  // overflow: auto;
+  overflow-y: scroll;
 
   @include break-at("small") {
     align-self: stretch;
   }
 
-  // scrollbar-color: var(--black);
-  // scrollbar-width: 8px;
-}
-
-::-webkit-scrollbar {
-  margin: 1rem;
-  width: 4px;
-  border: 1px solid black;
-  &-thumb {
-      background-color: var(--black);
-  }
+  scrollbar-color: #0dd1ff82 var(--white);
+  scrollbar-width: thin;
 }
