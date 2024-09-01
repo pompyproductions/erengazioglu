@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const ProjectCard = (props) => {
 
-  const { isCollapsed, setCollapsed } = useState(false);
+  const [isCollapsed, setCollapsed] = useState(true);
 
   const handleCollapse = () => {
     setCollapsed(state => !state)
@@ -12,11 +12,11 @@ const ProjectCard = (props) => {
 
   return (
     <Card
-      className="project"
+      className="project double"
       title={props.title}
-      
     >
-      <button className="close">{isCollapsed ? "+" : "—"}</button>
+      <button className="close" onClick={handleCollapse}>{isCollapsed ? "+" : "—"}</button>
+      <img src={props.image} alt={props.imageAlt}></img>
       <div className="content">
         {props.children}
       </div>
