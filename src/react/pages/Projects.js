@@ -19,8 +19,11 @@ const Projects = () => {
     <main>
       <h2>Projects</h2>
       <p>
-        Below, you can find some of my personal projects.<br/><br/>
-        Please note that <em>this page is still under development,</em> and that it's not an exhaustive list of my work.
+        Below, you can find some of my personal projects.
+        Please note that that it's not an exhaustive list of my work.<br/><br/> 
+        To find out more about what I do,
+        or to commission me for your own projects,
+        feel free to <Link to="/contact">reach out!</Link> 
       </p>
       <ProjectCard 
         title="Livrano.com" 
