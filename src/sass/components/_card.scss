@@ -73,6 +73,10 @@
       grid-column: 1 / span 2;
       width: 100%;
     }
+    .content.hidden,
+    img.hidden {
+      display: none;
+    }
     @include break-at("medium") {
       grid-template-columns: 15rem 1fr;
       grid-template-rows: min-content 1fr;

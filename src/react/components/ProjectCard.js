@@ -16,8 +16,8 @@ const ProjectCard = (props) => {
       title={props.title}
     >
       <button className="close" onClick={handleCollapse}>{isCollapsed ? "+" : "—"}</button>
-      <img src={props.image} alt={props.imageAlt}></img>
-      <div className="content">
+      <img src={props.image} alt={props.imageAlt} className={isCollapsed ? "hidden" : ""}></img>
+      <div className={`content${isCollapsed ? " hidden" : ""}`}>
         {props.children}
       </div>
     </Card>
