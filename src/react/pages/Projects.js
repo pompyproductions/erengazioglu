@@ -10,6 +10,11 @@ import acadmos from "../../assets/thumbnails/ACADMOS-L.jpg";
 import cuteloSite from "../../assets/thumbnails/CUTELO-L.jpg";
 
 const Projects = () => {
+
+  const handleLink = (e) => {
+    window.open(e.target.getAttribute("href"), "_blank")
+  }
+
   return (
     <main>
       <h2>Projects</h2>
@@ -31,7 +36,7 @@ const Projects = () => {
         </p> */}
         <p>Date: 2022</p>
         <div className="card-buttons">
-          <button href="https://livrano.com">Visit livrano.com</button>
+          <button href="https://livrano.com" onClick={handleLink}>Visit livrano.com</button>
         </div>
       </ProjectCard>
       <ProjectCard 
@@ -48,7 +53,7 @@ const Projects = () => {
         </p> */}
         <p>Date: 2024 – Present</p>
         <div className="card-buttons">
-          <button href="https://pompyproductions.github.io/autocad-reference/">Visit ACADMOS</button>
+          <button href="https://oncadevelopment.com" onClick={handleLink}>Visit ONCA</button>
         </div>
       </ProjectCard>
       <ProjectCard 
@@ -65,7 +70,7 @@ const Projects = () => {
         </p> */}
         <p>Date: 2024 – Present</p>
         <div className="card-buttons">
-          <button href="https://pompyproductions.github.io/autocad-reference/">Visit ACADMOS</button>
+          <button href="https://pompyproductions.github.io/autocad-reference/" onClick={handleLink}>Visit ACADMOS</button>
         </div>
       </ProjectCard>
 
@@ -85,7 +90,7 @@ const Projects = () => {
         {/* <p>Date: 2023 – Present</p>
         <p>Status: Under development</p> */}
         <div className="card-buttons">
-          <button href="https://studiocutelo.com">Visit studiocutelo.com</button>
+          <button href="https://studiocutelo.com" onClick={handleLink}>Visit studiocutelo.com</button>
         </div>
       </ProjectCard>
     </main>
