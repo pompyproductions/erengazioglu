@@ -15,14 +15,6 @@
   @include bg-frost;
 
   padding: var(--page-margin-y) var(--page-margin-x);
-  // .content {
-  //   display: flex;
-  // }
-
-  // .title-bar {
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
 
   h2 {
     font-size: 1.5em;
@@ -88,6 +80,9 @@
         grid-column: 1;
         min-height: 15rem;
         height: 100%;
+        &.hidden {
+          display: block
+        }
       }
       .title-bar {
         grid-row: 1;
@@ -96,6 +91,9 @@
       .content {
         grid-row: 2;
         grid-column: 2;
+        &.hidden {
+          display: flex;
+        }
       }
       .card-buttons {
         margin-top: auto;
