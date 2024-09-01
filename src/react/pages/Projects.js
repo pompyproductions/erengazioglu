@@ -1,9 +1,13 @@
 import React from "react";
 import Card from "../components/Card";
 import { Link } from "react-router-dom"
-import Image from "../components/Image";
-import livranoSite from "../../assets/thumbnails/LIVRANO-L.jpg";
 import ProjectCard from "../components/ProjectCard";
+
+// image imports
+import livranoSite from "../../assets/thumbnails/LIVRANO-L.jpg";
+import oncaSite from "../../assets/thumbnails/ONCA-L.jpg";
+import acadmos from "../../assets/thumbnails/ACADMOS-L.jpg";
+import cuteloSite from "../../assets/thumbnails/CUTELO-L.jpg";
 
 const Projects = () => {
   return (
@@ -31,9 +35,26 @@ const Projects = () => {
         </div>
       </ProjectCard>
       <ProjectCard 
+        title="ONCA Development website"
+        image={oncaSite}
+        imageAlt="ONCA Development website on a laptop display."
+      >
+        {/* <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/> */}
+        <p>
+          An online style guide and reference document for AutoCAD.
+        </p>
+        {/* <p>
+          In form of a static website written, developed, and maintained by me (using Material for MKDocs).
+        </p> */}
+        <p>Date: 2024 – Present</p>
+        <div className="card-buttons">
+          <button href="https://pompyproductions.github.io/autocad-reference/">Visit ACADMOS</button>
+        </div>
+      </ProjectCard>
+      <ProjectCard 
         title="AutoCAD Manual of Style"
-        image={livranoSite}
-        imageAlt="Livrano website on smartphone and laptop displays."
+        image={acadmos}
+        imageAlt="ACADMOS displayed on stacked laptops."
       >
         {/* <img src={livranoSite} alt="Livrano.com displayed on a laptop." className="thumb"/> */}
         <p>
@@ -51,7 +72,7 @@ const Projects = () => {
 
       <ProjectCard 
         title="Studio Cutelo website"
-        image={livranoSite}
+        image={cuteloSite}
         imageAlt="Livrano website on smartphone and laptop displays."
       >
         <p>
